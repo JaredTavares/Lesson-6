@@ -6,34 +6,37 @@
    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE"> 
 		<!--Links to css files or font files-->
- 		<link rel="stylesheet" type='text/css'
-		href="css/Framework.css">
+ 	<!--	<link rel="stylesheet" type='text/css'
+		href="css/Framework.css">-->
+		<link rel="stylesheet" type='text/css'
+		href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head> 
 	<body> 	
-	<div class='row'>
-			<div class= 'col-12'>
+	<div class='container-fluid'>
+		<div class='row'>
+			<div class= 'col-md-12'>
 				<header id='header'>			
 				<h1>Web Ninja</h1>					
 				</header>					
 			</div>
    </div>
-<!--End Header-->
+
    <div class='row'>
-		<div class= 'col-12' border>
+		<div class= 'col-md-12' border>
 			<nav id='nav'>
 				<ul class='button-wrap' style=" transform; translate;"/ul>
 					<button>Schedule</button>
-					<button>CSS</button>
-					<button>HTML</button>
+					<button data-toggle="modal" data-target="#CSS3_Modal">CSS</button>
+					<button data-toggle="modal" data-target="#HTML5_Modal">HTML</button>
 					<button>Reponsive Design</button>
 				</ul>			
 			</nav>			
 		</div>
 	</div>
-<!--End Menu-->
-			<div class='row'>
-				<div class='col-8'>
+<!--End Menu-->		
+		<div class='row max width'>
+				<div class='col-md-8'>
 					<div class="side-by-side">
 						<section class="image-content">
 							<img src='images/jared.jpg'>
@@ -43,13 +46,16 @@
 						</section>	
 						<article>
 						<h2>Summary</h2>
-						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+						<p>Always looking for a problem to solve and a site to build. Experience with many modern web frameworks such as bootstrap, knockout js, and masonry. Have a look at some of my work.</p>
 					</article>
 					</div>	
 					<!--end side by side-->
 				<section id='skills'>
 				<h5>SKILLS: <span>html | css | javascript | git</span></h5></section>			
-				<div class='col-4'>						
+
+
+		</div>		
+				<div class='col-md-4'>						
 					<div id="aside-content-wrapper">
 				<aside id='aside-right'>
 					<h3>Latest Work</h3>
@@ -63,31 +69,77 @@
 					</ul>
 				</aside>
 			</div>
-			<!--end aside-content-wrapper-->
-			</div>
-		<!end Main-Content-Wrapper-->
-
-		</div>		
-	   <div id='favorite-sites' class="row">
-		 <div class='col-4 border'>
-		  <img src='images/fbook.png'>
-		 </div>
-			 <div class='col-4 border'>
-		   <img src='images/gplus.png'>
-		 </div>
-		    <div class='col-4 border'>
-		   <img src='images/twitter.png'>		   
 		</div>
-				<div class="row">
-		   <div class='col-12 border'>
-				<footer><h1>Footy</h1></footer>	
-					</div>
+	</div>
+		<div id='favorite-sites'>
+		<div class="row">
+		 <div class='col-md-4 border'>
+		 	<img class="img-responsive" src='images/fbook.png'>
+		 </div>
+		 <div class='col-md-4 border'>
+		   <img class="img-responsive" src='images/gplus.png'>
+		 </div>
+		 <div class='col-md-4 border'>
+		   <img class="img-responsive" src='images/twitter.png'>		   
+		</div>
+		<div class="row">
+		   <div class='col-md-12 border'>
+			</div>
 		   </div>
-				</div>
-			<!--end container-->
-    	  <script src="js/main.js"></script>
-
+		  </div>	
+	     </div>
 		
-	    </body>
-
+<!-- End container Div -->		
+		<!-- Modal-HTML5 -->
+<div class="modal fade" id="HTML5_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <img src="images/html5.png">
+		  <br>
+		  <p><strong>HTML5</strong>HTML5 [a] is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current version of the HTML standard</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+	    <!-- Modal-CSS3 -->
+<div class="modal fade" id="CSS3_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class='img-modal'>
+		  <img src="images/css3.png">
+			</div>
+		  <br>
+		  <p><strong>CSS3</strong>CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+		
+				<script src="javascript/jquery.min.js"></script>
+				<script src="javascript/bootstrap.min.js"></script>
+				<script src="javascript/main.js"></script>
+					
+			<footer><h1>Footy</h1></footer>
+		
+				</body>
+		
+		
 </html> 
